@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['shashikant.jagtap@aol.co.uk']
   spec.summary       = 'BrowserMob Proxy CLI to Generate HAR and Capture Traffic'
   spec.description   = 'This Rubygem is CLI interface to check network traffic using HAR. It will generate HAR file preview in browser and YAML'
-  spec.homepage      = "No HomePage Yet."
+  spec.homepage      = "https://github.com/Shashikant86/browsermob-cli"
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
