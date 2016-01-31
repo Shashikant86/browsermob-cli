@@ -20,6 +20,9 @@ Before we start, please make sure you got following packages installed
 * wget
 * Ruby > 1.9.3
 * Bundler
+* Install Har gem
+
+          $ gem install har
 
 Add this line to your application's Gemfile:
 

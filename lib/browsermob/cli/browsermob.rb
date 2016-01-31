@@ -73,7 +73,7 @@ module BrowserMob
       end
 
       def show_har_data_browser
-        exec("bundle exec har /tmp/traffic.har")
+        exec("har /tmp/traffic.har")
       end
 
       def capture_traffic(url)
