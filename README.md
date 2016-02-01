@@ -3,9 +3,9 @@
 BrowserMob CLI os Rubygem to generate HAR files from command line. This will preview HAR files in the Browser as well as parse it in YAML. It works well for FirefoxDriver and ChromeDriver/GhostDriver are WIP.
 
 If you are new to HAR(HTTP Archive) & BrowserMob Proxy then please read these couple of links
-* What is (HAR)[https://www.maxcdn.com/one/visual-glossary/har-file/]
-* HAR (Spec)[http://www.softwareishard.com/blog/har-12-spec/]
-* (BrowserMobProxy)[http://bmp.lightbody.net/]
+* What is [HAR](https://www.maxcdn.com/one/visual-glossary/har-file/)
+* HAR [Spec](http://www.softwareishard.com/blog/har-12-spec/)
+* [BrowserMobProxy](http://bmp.lightbody.net/)
 
 HAR file can be used for
 * Calculate Load time.
