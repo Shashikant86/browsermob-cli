@@ -1,8 +1,20 @@
 # BrowserMob CLI
 
-BrowserMob CLI os Rubygem to generate HAR files from command line. This will preview HAR files in the Browser as well as parse it in YAML. It works well for FirefoxDriver and ChromeDriver/GhostDriver are WIP
+BrowserMob CLI os Rubygem to generate HAR files from command line. This will preview HAR files in the Browser as well as parse it in YAML. It works well for FirefoxDriver and ChromeDriver/GhostDriver are WIP.
 
-BrowserMob CLI can do following things:
+If you are new to HAR(HTTP Archive) & BrowserMob Proxy then please read these couple of links
+* What is (HAR)[https://www.maxcdn.com/one/visual-glossary/har-file/]
+* HAR (Spec)[http://www.softwareishard.com/blog/har-12-spec/]
+* (BrowserMobProxy)[http://bmp.lightbody.net/]
+
+HAR file can be used for
+* Calculate Load time.
+* Set/Get HTTP Headers during your tests
+* Capture performance data with HAR files.
+* Simulate network traffic and latency
+* Rewrite HTTP requests and response
+
+##BrowserMob CLI can do following things:
 
 * Download Browsermobproxy programatically and save it in /tmp
 
@@ -41,11 +53,11 @@ Or install it yourself as:
 ## Usage
 
 #### Download BrowserMob Proxy
-Assuming that you don't have BrowserMob Proxy downloaded, then first thing we probaly need to download it and save it to your /tmp directory (Assuming /tmp has write access). It should do be done by
+Assuming that you don't have BrowserMob Proxy downloaded, then first thing we probaly need to download it and save it to your /tmp directory (Assuming /tmp has write access). Just run following command.
 
         $ browsermob-cli setup
 
-Now, you should have browsermob-proxy binary downloaded. We need to keep in the /tmp directory itself.
+Now, you should have browsermob-proxy binary downloaded in the /tmp directory itself.
 
 #### Generate HAR file for any URL
 We can generate HAR data for any url e.g (AOL website) by running
