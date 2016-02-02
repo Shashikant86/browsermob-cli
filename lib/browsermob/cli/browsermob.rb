@@ -20,9 +20,9 @@ module BrowserMob
 
       def download_browsermob_proxy
         FileUtils.rm_rf('/tmp/browsermob-proxy') if Dir.exists?("/tmp/browsermob-proxy")
-        system('cd /tmp && wget https://github.com/downloads/webmetrics/browsermob-proxy/browsermob-proxy-2.0-beta-6-bin.zip')
-        system("cd /tmp && unzip browsermob-proxy-2.0-beta-6-bin.zip")
-        system("mv /tmp/browsermob-proxy-2.0-beta-6 /tmp/browsermob-proxy/")
+        system('cd /tmp && wget https://github.com/lightbody/browsermob-proxy/releases/download/browsermob-proxy-2.1.0-beta-4/browsermob-proxy-2.1.0-beta-4-bin.zip')
+        system("cd /tmp && unzip browsermob-proxy-2.1.0-beta-4-bin.zip")
+        system("mv /tmp/browsermob-proxy-2.1.0-beta-4 /tmp/browsermob-proxy/")
         system("chmod +x /tmp/browsermob-proxy/bin/browsermob-proxy")
       end
 

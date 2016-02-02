@@ -30,6 +30,10 @@ HAR file can be used for
 Before we start, please make sure you got following packages installed
 
 * wget
+* Java version > 1.7 and JAVA_HOME set in .bashrc or .zshrc. This is important otherwise browsermob proxy server won't start. OSX Mac user can set it using
+
+                  export JAVA_HOME=$(/usr/libexec/java_home)
+
 * Ruby > 1.9.3
 * Bundler
 * Install Har gem
@@ -58,6 +62,9 @@ Assuming that you don't have BrowserMob Proxy downloaded, then first thing we pr
         $ browsermob-cli setup
 
 Now, you should have browsermob-proxy binary downloaded in the /tmp directory itself.
+
+If that does't work, feel free to manually download BrowserMob proxy from [official website](https://bmp.lightbody.net/) Or from Github.
+Save it to /tmp/browsermob-proxy
 
 #### Generate HAR file for any URL
 We can generate HAR data for any url e.g (AOL website) by running
@@ -102,3 +109,22 @@ You can view generated YAML file with HAR data.
          browsermob-cli version              # Get the current version number
          browsermob-cli view_har_in_YAML     # Display HAR file in YML in your Editor
          browsermob-cli view_har_in_browser  # Open up browser and Preview HAR file. Press Ctl+C Once DONE...
+
+### Common issues
+
+* Server won't start
+Issue: Error message
+
+            unable to launch the server (rerun with :log => true to see process output) (BrowserMob::Proxy::Server::ServerDiedError)
+
+There may be few reason.
+
+1] It uses port 7676. It may be in use. Clear the port by running following command
+
+           $ kill -9 $(lsof -i tcp:3000 -t)
+
+It works for Mac OSX.
+
+2] Java version is below 1.7. Update your JAVA version.
+
+3]  Make sure $JAVA_HOME set correctly, for mac, it’s “export JAVA_HOME=$(/usr/libexec/java_home)”.

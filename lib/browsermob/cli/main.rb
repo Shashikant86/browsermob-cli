@@ -45,6 +45,11 @@ module BrowserMob
       def view_har_in_YAML
         system("open /tmp/traffic.yml")
       end
+
+      desc 'kill_port', 'Clear Port used by BrowserMob proxy'
+      def port_clearance
+        system('kill -9 $(lsof -i tcp:7676 -t)')
+      end
     end
   end
 end
